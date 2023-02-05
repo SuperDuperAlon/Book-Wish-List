@@ -1,5 +1,5 @@
 import { bookService } from "../services/book.service.js";
-import { store } from "./store";
+import { store } from "./store.js";
 import { showSuccessMsg, showErrorMsg } from "../services/event-bus.service.js";
 import {
   ADD_BOOK,

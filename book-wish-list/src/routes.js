@@ -1,15 +1,15 @@
 
-import { BookIndex } from './pages/book-index'
+// import { BookIndex } from './pages/book-index'
 
 
-// Routes accesible from the main navigation (in AppHeader)
-const routes = [
-    {
-        path: '/',
-        component: <BookIndex />,
-        label: 'Books'
-    },
+// // Routes accesible from the main navigation (in AppHeader)
+// const routes = [
+//     {
+//         path: '/',
+//         component: <BookIndex />,
+//         label: 'Books'
+//     },
 
-]
+// ]
 
-export default routes
+// export default routes

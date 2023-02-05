@@ -1,0 +1,12 @@
+.book-wishlist {
+
+}
+
+.wishlist-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: 0.5rem orange solid;
+    margin-bottom: 1rem;
+    padding-left: 0.25 rem;
+}

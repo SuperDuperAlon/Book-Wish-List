@@ -1,17 +1,17 @@
-export function BookWishlist({ books, onRemoveBook }) {
-  if (!books) return <div>No Books</div>;
-  else
+export function BookWishlist({ books, onRemoveFromWishlist }) {
+    const filteredBooks = books.filter(book => book.wishlist)
+
     return (
       <section>
         <ul className="book-list clean-list">
-          {books.map((book) => (
+          {filteredBooks.map((book) => (
             <li className="book-wishlist clean-list" key={book._id}>
               <div className="wishlist-item">
                 <div>{book.title}</div>
                 <div>
                   <button
                     onClick={() => {
-                      onRemoveBook(book._id);
+                        onRemoveFromWishlist(book._id);
                     }}
                   >
                     x

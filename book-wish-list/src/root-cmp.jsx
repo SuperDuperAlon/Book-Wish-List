@@ -1,7 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
 
-import routes from './routes'
+import { BookIndex } from './pages/book-index'
+
+// import routes from './routes'
 
 
 export function RootCmp() {
@@ -10,7 +12,7 @@ export function RootCmp() {
         <div>
             <main>
                 <Routes>
-                    {routes.map(route => <Route key={route.path} exact={true} element={route.component} path={route.path} />)}
+                <Route path="/" element={<BookIndex />} />
                 </Routes>
             </main>
         </div>

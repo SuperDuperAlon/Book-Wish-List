@@ -15,7 +15,7 @@ const initialState = {
 export function bookReducer(state = initialState, action) {
     var newState = state
     var books
-    var bookt
+    var book
     switch (action.type) {
         case SET_BOOKS:
             newState = { ...state, books: action.books }

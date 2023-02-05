@@ -5,6 +5,8 @@ import { loadBooks, addBook, updateBook, removeBook } from '../store/book.action
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { bookService } from '../services/book.service.js'
 
+import {BookPreview} from '../pages/book-preview'
+
 export function BookIndex() {
 
     const books = useSelector(storeState => storeState.bookModule.books)
@@ -49,11 +51,15 @@ export function BookIndex() {
         console.log(`TODO Adding msg to book`)
     }
 
+    console.log(books)
+
+    if (!books) return <div>loading</div>
+
     return (
         <div>
             <h3>Books App</h3>
             <main>
-                <button onClick={onAddBook}>Add Book ⛐</button>
+                {/* <button onClick={onAddBook}>Add Book ⛐</button>
                 <ul className="book-list">
                     {books.map(book =>
                         <li className="book-preview" key={book._id}>
@@ -69,7 +75,8 @@ export function BookIndex() {
                             <button onClick={() => { onAddBookMsg(book) }}>Add book msg</button>
                         </li>)
                     }
-                </ul>
+                </ul> */}
+                <BookPreview books={books}/>
             </main>
         </div>
     )

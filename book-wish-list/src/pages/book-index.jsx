@@ -60,8 +60,8 @@ export function BookIndex() {
         <div>                   
             <h3>Books App</h3>
             <main>
-                <BookWishlist books={books} onRemoveBook={onRemoveBook}/>
                 <BookPreview books={books}/>
+                <BookWishlist books={books} onRemoveBook={onRemoveBook}/>
             </main>
         </div>
     )

@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { loadBooks, addBook, updateBook, removeBook } from '../store/book.actions.js'
+import { loadBooks, addBook, updateBook, removeBook, onRemoveBookOptimistic } from '../store/book.actions.js'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { bookService } from '../services/book.service.js'
+import { BookWishlist } from './book-wishlist.jsx'
 
 export function BookIndex() {
 
@@ -51,25 +52,10 @@ export function BookIndex() {
 
     return (
         <div>
+                           
             <h3>Books App</h3>
             <main>
-                <button onClick={onAddBook}>Add Book ⛐</button>
-                <ul className="book-list">
-                    {books.map(book =>
-                        <li className="book-preview" key={book._id}>
-                            <h4>{book.vendor}</h4>
-                            <h1>⛐</h1>
-                            <p>Price: <span>${book.price.toLocaleString()}</span></p>
-                            <p>Owner: <span>{book.owner && book.owner.fullname}</span></p>
-                            <div>
-                                <button onClick={() => { onRemoveBook(book._id) }}>x</button>
-                                <button onClick={() => { onUpdateBook(book) }}>Edit</button>
-                            </div>
-
-                            <button onClick={() => { onAddBookMsg(book) }}>Add book msg</button>
-                        </li>)
-                    }
-                </ul>
+            <BookWishlist books={books} onRemoveBook={onRemoveBook}/>
             </main>
         </div>
     )

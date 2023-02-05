@@ -11,6 +11,7 @@ html {
     font-family: montserrat;
     line-height: 1.6;
     color: $clr2;
+    background-color: rgb(227, 227, 226);
 }
 
 body {
@@ -46,3 +47,7 @@ a:hover {
     text-decoration: underline;
 }
 
+ul{
+    list-style-type: none;
+    padding: 0;  
+}

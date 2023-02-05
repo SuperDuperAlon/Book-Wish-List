@@ -57,9 +57,8 @@ export function BookIndex() {
     if (!books) return <div>loading</div>
 
     return (
-        <div>                   
-            <h3>Books App</h3>
-            <main>
+        <div className='book-index'>                   
+            <main className='books-container'>
                 <BookPreview books={books}/>
                 <BookWishlist books={books} onRemoveBook={onRemoveBook}/>
             </main>

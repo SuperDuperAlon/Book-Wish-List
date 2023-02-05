@@ -1,0 +1,15 @@
+.book-preview{
+
+    display: flex;
+    align-items: center;
+    .book{
+        background-color: white;
+        padding: 20px;
+
+        p{
+            overflow: auto;
+            max-height: 80px;
+            white-space:break-spaces;
+        }
+    }
+}
